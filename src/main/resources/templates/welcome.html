@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>欢迎邮件</title>
+</head>
+<body>
+    <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
+        <h1 style="color: #333;">欢迎加入我们！</h1>
+        
+        <p>亲爱的 <span th:text="${username}">用户</span>：</p>
+        
+        <p>感谢您的注册！我们很高兴您能加入我们的平台。</p>
+        
+        <p>您的账户信息如下：</p>
+        <ul>
+            <li>用户名：<strong th:text="${username}">用户名</strong></li>
+            <li>注册时间：<span th:text="${registerTime}">注册时间</span></li>
+        </ul>
+        
+        <p>如果您有任何问题，请随时联系我们的客服团队。</p>
+        
+        <div style="margin-top: 20px; padding: 10px; background-color: #f5f5f5;">
+            <p style="margin: 0;">祝您使用愉快！</p>
+            <p style="margin: 5px 0 0;">消息服务团队</p>
+        </div>
+    </div>
+</body>
+</html> 

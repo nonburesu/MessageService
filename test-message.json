@@ -1,0 +1,16 @@
+{
+    "messageId": "msg-test-005",
+    "idempotencyKey": "idemp-test-005",
+    "subject": "安全警告：检测到新设备登录",
+    "content": null,
+    "to": ["2629827042@qq.com"],
+    "templateId": "security-alert",
+    "templateVariables": {
+        "username": "张三",
+        "loginTime": "2025-06-22 16:45:30",
+        "location": "北京市",
+        "device": "Chrome浏览器 Windows 10",
+        "ipAddress": "192.168.1.1",
+        "securityLink": "https://example.com/security/settings"
+    }
+} 

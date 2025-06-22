@@ -1,0 +1,13 @@
+{
+    "messageId": "msg-test-004",
+    "idempotencyKey": "idemp-test-004",
+    "subject": "密码重置请求",
+    "content": null,
+    "to": ["2629827042@qq.com"],
+    "templateId": "reset-password",
+    "templateVariables": {
+        "username": "张三",
+        "resetLink": "https://example.com/reset?token=abc123def456",
+        "expireTime": "30分钟"
+    }
+} 

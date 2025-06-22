@@ -1,0 +1,8 @@
+{
+    "to": "yjpmidj309@163.com",
+    "subject": "项目进度通知",
+    "content": "尊敬的项目负责人：<br><br>您负责的项目有以下更新：<br><br><ul><li>需求分析阶段已完成</li><li>原型设计已提交审核</li><li>预计下周开始开发</li></ul><br>请及时查看并确认。",
+    "username": "李项目",
+    "actionLink": "https://example.com/project/status",
+    "actionText": "查看项目详情"
+} 

@@ -1,0 +1,50 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/messageservice?useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  sql:
+    init:
+      mode: always
+      schema-locations: classpath:schema.sql
+      data-locations: classpath:data.sql
+      platform: mysql
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+
+  mail:
+    host: smtp.qq.com
+    port: 465
+    username: 3446994995@qq.com
+    password: aoepdzszyvfrdadg  # QQ邮箱授权码
+    properties:
+      mail.smtp.auth: true
+      mail.smtp.ssl.enable: true
+      mail.smtp.starttls.enable: true
+      mail.smtp.starttls.required: true
+      mail.smtp.socketFactory.class: javax.net.ssl.SSLSocketFactory
+      mail.smtp.socketFactory.port: 465
+    163:
+      host: smtp.163.com
+      username: 19963107978@163.com
+      password: FNrvviXcTCjMf3nN
+      protocol: smtp
+      default-encoding: UTF-8
+      sender-name: 系统通知
+      auth: true
+      debug: false
+
+topbiz:
+  feedback-url: http://localhost:8080/mock/feedback
+
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

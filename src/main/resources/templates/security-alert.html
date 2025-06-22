@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>安全警告</title>
+</head>
+<body>
+    <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
+        <h2 style="color: #ff4444;">安全警告</h2>
+        
+        <p>亲爱的 <span th:text="${username}">用户</span>：</p>
+        
+        <p>我们检测到您的账号在新设备上登录：</p>
+        
+        <div style="background-color: #f5f5f5; padding: 15px; margin: 20px 0;">
+            <p><strong>登录时间：</strong> <span th:text="${loginTime}">2025-06-22 16:45:30</span></p>
+            <p><strong>登录地点：</strong> <span th:text="${location}">北京市</span></p>
+            <p><strong>设备信息：</strong> <span th:text="${device}">Chrome浏览器 Windows 10</span></p>
+            <p><strong>IP地址：</strong> <span th:text="${ipAddress}">192.168.1.1</span></p>
+        </div>
+        
+        <p style="color: #ff4444; font-weight: bold;">
+            如果这不是您的操作，您的账号可能已被他人登录。请立即：
+        </p>
+        
+        <ol>
+            <li>点击下方按钮修改密码</li>
+            <li>检查账号安全设置</li>
+            <li>开启两步验证</li>
+        </ol>
+        
+        <div style="margin: 25px 0;">
+            <a th:href="${securityLink}" style="background-color: #ff4444; color: white; padding: 12px 25px; text-decoration: none; border-radius: 3px; display: inline-block;">
+                立即处理
+            </a>
+        </div>
+        
+        <div style="margin-top: 20px; padding: 10px; border-top: 1px solid #eee;">
+            <p style="color: #999; font-size: 12px;">
+                此邮件由系统自动发送，如果您确认这是您本人的操作，请忽略此邮件。
+            </p>
+        </div>
+    </div>
+</body>
+</html> 
